@@ -24,6 +24,7 @@ module.exports = {
                 avatar_url,
                 bio
             } = apiResponse.data;
+            
 
             const techsArray = parseStringAsArray(techs);
 
