@@ -11,6 +11,7 @@ const DevSchema = new mongoose.Schema({
         type: PointSchema,
         index: '2dsphere'
     }
+    
 })
 
 module.exports = mongoose.model('Dev', DevSchema);

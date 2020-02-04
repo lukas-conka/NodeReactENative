@@ -28,7 +28,7 @@ module.exports = {
 
             const techsArray = parseStringAsArray(techs);
 
-            const location = {
+           const location = {
                 type: 'Point',
                 coordinates: [longitude, latitude]
             }

@@ -5,7 +5,7 @@ const cors = require('cors')
 
 const app = express();
 app.use(cors())
-mongoose.connect('mongodb+srv://lukasconka:5Csl3dVcgnatKcqY@cluster0-svoda.mongodb.net/week10?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://lucasamaral:swordfish7@ds257054.mlab.com:57054/curso', {useNewUrlParser: true, useUnifiedTopology: true })
 
 
 //o arquivo de Routes deve vir depois 
