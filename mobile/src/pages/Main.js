@@ -14,10 +14,12 @@ import {
 } from "expo-location";
 import { MaterialIcons } from "@expo/vector-icons";
 import api from "../services/api";
+//import socket from '../services/socket';
 
 function Main({ navigation }) {
   const [devs, setDevs] = useState([]);
   const [currentRegion, setCurrentRegion] = useState(null);
+  const [techs, setTechs] = useState('');
 
   useEffect(() => {
     async function loadInitialPosition() {
@@ -45,15 +47,19 @@ function Main({ navigation }) {
   async function loadDevs() {
     const { latitude, longitude } = currentRegion;
 
+        console.log(techs)
+
+
     const response = await api.get("/search", {
       params: {
         latitude,
         longitude,
-        techs: "ReactJS"
+        techs: 'NodeJs'
       }
     });
 
-    console.log(response.data)
+    console.log('DEVS', response.data.devs)
+
 
     setDevs(response.data.devs);
   }
@@ -167,7 +173,6 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 50,
     backgroundColor: "#FFF",
-    color: "#fff",
     borderRadius: 25,
     paddingHorizontal: 20,
     fontSize: 16,
