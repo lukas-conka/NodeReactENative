@@ -54,7 +54,7 @@ function Main({ navigation }) {
       params: {
         latitude,
         longitude,
-        techs: 'NodeJs'
+        techs
       }
     });
 
@@ -120,6 +120,8 @@ function Main({ navigation }) {
           placeholderTextColor="#999"
           autoCapitalize="words"
           autoCorrect={false}
+          value={techs}
+          onChangeText={setTechs}
         />
         <TouchableOpacity style={styles.loadButton} onPress={loadDevs}>
           <MaterialIcons name="my-location" size={20} color="#fff" />
