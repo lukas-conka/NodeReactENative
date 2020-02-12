@@ -1,9 +1,12 @@
-const socketio = require('socket.io');
+const socketio = require("socket.io");
 
-exports.setupWebsocket = (server) => {
-    const io = socketio(server)
+exports.setupWebsocket = server => {
+  const io = socketio(server);
 
-    io.on('connection', socket => {
-        console.log(socket.io)
-    })
-}
+
+  io.on('connection', socket => {
+    console.log('New User Connected')
+    console.log(socket.id);    
+    //console.log(socket.handshake.query)
+  });
+};

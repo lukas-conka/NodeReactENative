@@ -8,7 +8,7 @@ module.exports = {
         
         const techsArray = parseStringAsArray(techs);
 
-        console.log('techs', request.query)
+       // console.log('techs', request.query)
 
         const devs = await Dev.find({
             techs:{
@@ -24,7 +24,7 @@ module.exports = {
                 }
             },
         })
-        console.log(`DEVS BACK`, devs)
+       // console.log(`DEVS BACK`, devs)
         return response.json({devs})
     }
 
