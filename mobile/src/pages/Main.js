@@ -45,6 +45,7 @@ function Main({ navigation }) {
   }, []);
 
   function setupWebsocket(){
+
     const { latitude, longitude } = currentRegion;
     
     connect(
